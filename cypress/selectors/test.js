@@ -5,5 +5,5 @@ export const dataAttr = (target, value="") => {
 
 
 export default class TestSelectors {
-  toggle = dataAttr("toggle", "collapse")
+  toggle = dataAttr("toggle", "dropdown")
 }

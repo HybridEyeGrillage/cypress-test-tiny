@@ -10,7 +10,7 @@ describe('page', () => {
     cy.log("Actual: Assertion changes the expected data attribute to a <element.class> but doesn't fail.")
     
     cy.log("Checking that hardcoded data attribute exist")
-    cy.get("[data-toggle=collapse]").should("exist")
+    cy.get("[data-toggle=dropdown]").should("exist")
     
     cy.log("Checking that referenced data attribute exist")
     cy.get(testSelectors.toggle).should("exist")
@@ -20,7 +20,10 @@ describe('page', () => {
     cy.log("Actual: Assertion changes the expected data attribute to a <element.class> and will fail.")
     
     cy.log("Checking that hardcoded data attribute is visible")
-    cy.get("[data-toggle=collapse]").should("be.visible")
+    cy.get("[data-toggle=dropdown]").should("not.be.visible")
+    
+    cy.log("Checking that hardcoded data attribute is visible")
+    cy.get("[data-toggle=dropdown]").should("be.visible")
     
     cy.log("Checking that referenced data attribute is visible")
     cy.get(testSelectors.toggle).should("be.visible")
